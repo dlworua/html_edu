@@ -1,27 +1,195 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>수줍은 첫번째</title>
-</head>
-<body>
-    <h1 style="background-color: rgb(235, 236, 163); text-align: center;">HTML 마스터하기</h1>
-<hr>
-<ul>
-        <li><h3>태그 알아보기!</h3></li>
-        h1 ~ h6  = 큰제목에서 작은 제목까지
-        <li><h4>단일태그란?</h4></li>
-        단일태그란 닫는 태그가 필요하지 않아 단일로 사용가능 한 태그 <br>
-        단일태그의 종류 [꺽쇠는 " "로 대체]
-        <ul>
-        <li>"br" - 강제 줄바꿈. 즉, 엔터의 역할을 해주는 태그</li>
-        <li>"hr" - 수평선을 그려주는 태그 (color,size 속성으로 색상 및 두께 조절가능) </li>
-        <li>"img" - 이미지를 삽입 할때 사용되는 태그</li>
-        <li>"input" - </li>
-        <li>"meta" - </li>
-        <li>"link" - </li>
+  </head>
+  <body style="background-color: rgb(0, 170, 255, 25%); background-size: cover">
+    <h1
+      style="
+        text-align: center;
+        background-image: url('https://mblogthumb-phinf.pstatic.net/MjAyMjA5MDVfMjAz/MDAxNjYyMzE1MTEwODM2.-zc8Jw2FcR9yeKj3fZL9yTATgFpxvHcdZdRmpH6xn5sg.rUBvTd5grPsBJb2pS9hzfzmN_HWxBEe-jSXVyVrS_V4g.JPEG.ovo--vnv/France_cafe_background.jpeg?type=w800');
+        background-size: auto;
+        color: rgb(245, 216, 179);
+      "
+    >
+      HTML 마스터하기
+    </h1>
+    <hr />
+    <h2>HTML 태그의 기본 구조</h2>
+    <pre style="font-size: 150%; font-weight: bold">
+<mark style="background-color: rgba(194, 255, 138, 0.527)">&lt;태그명 속성="값"&gt;내용&lt;/태그명&gt;</mark>
+<mark style="background-color: rgba(194, 255, 138, 0.527)">여는 태그: &lt;태그명&gt;</mark>
+<mark style="background-color: rgba(194, 255, 138, 0.527)">닫는 태그: &lt;/태그명&gt;</mark>                     
+<mark style="background-color: rgba(194, 255, 138, 0.527)">속성: 태그에 추가 정보 제공</mark>                     
+<mark style="background-color: rgba(194, 255, 138, 0.527)">내용: 태그 사이에 들어가는 실제 콘텐츠</mark>                                   
+     </pre>
+    <hr />
+    <h2>HTML "일반태그" 모음</h2>
+    <pre style="font-size: 140%; font-weight: bold">
+일반 HTML 태그는 크게 여러 그룹으로 나눌 수 있다.
+일반 태그는 시작 태그와 닫는 태그로 구성되며, 그 사이에 콘텐츠를 담는다.
+아래는 HTML5를 기준으로 한 주요 일반 태그들이다</pre
+    >
+    <ul>
+      <h2><strong>문서 구조 및 기본</strong></h2>
+      <li>&lt;html&gt; : HTML 문서의 최상위(루트) 요소</li>
+      <li>
+        &lt;head&gt; : 문서의 메타데이터를 포함하며, 브라우저에 정보를 전달
+      </li>
+      <li>&lt;title&gt; : 웹 페이지의 제목을 정의합니다. 브라우저 탭에 표시</li>
+      <li>&lt;body&gt; : 웹 페이지에 표시되는 모든 콘텐츠(본문)를 담는 태그</li>
+
+      <h2>
+        <strong>텍스트 및 콘텐츠</strong>
+      </h2>
+
+      <li>
+        &lt;h1&gt; ~ &lt;h6&gt; : 제목을 정의하는 태그 &lt;h1&gt;이 가장 중요한
+        제목이며, &lt;h6&gt;가 가장 덜 중요한 제목이다. (그냥 크기차이)
+      </li>
+      <li>&lt;p&gt; : 문단을 정의(문단 영역을 구분해줌)</li>
+      <li>&lt;a&gt; : 하이퍼링크(클릭시 지정된 위치이동)를 만들어줌</li>
+      <li>
+        &lt;span&gt; : 인라인 요소를 묶는 데 사용되며 특별한 의미는 없음(영역
+        구분용도)
+      </li>
+      <li>
+        &lt;div&gt; : 블록 레벨 요소를 묶는 데 사용되며 특별한 의미는 없음(영역
+        구분용도)
+      </li>
+      <li>&lt;strong&gt; : 중요한 텍스트를 강조(굵게 표시)</li>
+      <li>&lt;em&gt; : 텍스트의 중요성을 강조(기울게 표시)</li>
+      <li>&lt;blockquote&gt; : 인용 블록을 정의(들여쓰기 + 문단영역 구분)</li>
+
+      <h2>
+        <strong>시맨틱 구조</strong>
+        <h5>
+          HTML5에서 도입된 시맨틱 태그는 웹 문서의 구조와 의미를 명확하게 한다.
+        </h5>
+      </h2>
+
+      <li>&lt;header&gt; : 페이지나 섹션의 머리글(소개 콘텐츠)을 정의</li>
+      <li>&lt;nav&gt; : 내비게이션 링크를 포함하는 영역을 정의</li>
+      <li>&lt;main&gt; : 문서의 주요 콘텐츠를 정의</li>
+      <li>
+        &lt;article&gt; : 독립적인 콘텐츠를 정의합니다 (예: 블로그 게시물, 뉴스
+        기사)
+      </li>
+      <li>&lt;section&gt; : 문서의 독립적인 섹션을 정의</li>
+      <li>
+        &lt;aside&gt; : 페이지의 주요 콘텐츠와 간접적으로 관련된 콘텐츠(사이드바
+        등)를 정의
+      </li>
+      <li>&lt;footer&gt; : 페이지나 섹션의 바닥글을 정의</li>
+      <li>
+        &lt;figure&gt;, &lt;figcaption&gt; : 이미지, 다이어그램, 코드 조각 등과
+        그에 대한 캡션을 정의
+      </li>
+
+      <h2><strong>멀티미디어 관련</strong></h2>
+
+      <li>&lt;audio&gt; : 오디오 콘텐츠를 삽입</li>
+      <li>&lt;video&gt; : 비디오 콘텐츠를 삽입</li>
+      <li>&lt;iframe&gt; : 다른 HTML 문서를 현재 문서에 삽입</li>
+
+      <h2><strong>폼 관련</strong></h2>
+
+      <li>&lt;form&gt; : 사용자의 입력을 받는 양식 정의</li>
+      <li>&lt;label>&gt; : 폼 컨트롤의 설명을 정의</li>
+      <li>&lt;select&gt;, &lt;option&gt; : 드롭다운 목록을 만든다.</li>
+      <li>&lt;textarea&gt; : 여러 줄의 텍스트 입력 필드를 만든다.</li>
+      <li>&lt;button&gt; : 클릭 가능한 버튼을 만든다.</li>
+      <li>
+        &lt;fieldset&gt;, &lt;legend&gt; : 폼에서 관련 컨트롤들을 그룹화한다.
+      </li>
+
+      <h2><strong>표(테이블) 관련</strong></h2>
+
+      <li>&lt;table&gt; : 표를 정의.</li>
+      <li>&lt;thead&gt; : 테이블의 헤더 부분 정의</li>
+      <li>&lt;tbody&gt; : 테이블의 본문 부분 정의</li>
+      <li>&lt;tfoot&gt; : 테이블의 바닥글 부분 정의</li>
+      <li>&lt;tr&gt; : 테이블의 한 행을 정의</li>
+      <li>&lt;th&gt; : 테이블의 헤더 셀을 정의</li>
+      <li>&lt;td&gt; : 테이블의 일반 데이터 셀을 정의</li>
+      <li>&lt;caption&gt; : 테이블의 캡션을 정의</li>
+
+      <h2><strong>목록 관련</strong></h2>
+
+      <li>&lt;ul&gt; : 표를 정의.</li>
+      <li>&lt;ol&gt; : 테이블의 헤더 부분 정의</li>
+      <li>&lt;li&gt; : 테이블의 본문 부분 정의</li>
+      <li>
+        &lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt; : 정의 목록을 정의하며, &lt;dt&gt;는
+        용어, &lt;dd&gt;는 용어에 대한 설명을 정의한다.
+      </li>
     </ul>
 
-</body>
-</html> 
+    <hr />
+    <h2>HTML "단일태그" 모음</h2>
+    <pre style="font-size: 140%; font-weight: bold">
+HTML에서 단일 태그는 콘텐츠를 가질 수 없는 '빈 요소(void element)'를 의미
+이러한 단일태그는 여는 태그만 있고 닫는 태그가 필요 없음
+HTML에서는 편의상 끝에 슬래시(/)를 붙이지 않아도 되지만,
+XHTML과의 호환성을 위해 붙이기도 함</pre
+    >
+    <ul>
+      <h2><strong>시각 및 구조</strong></h2>
+      <li>&lt;br&gt; : 줄바꿈 (엔터의 역할)</li>
+      <li>&lt;hr&gt; : 수평선을 그어 내용을 구분</li>
+      <li>&lt;img&gt; : 이미지를 삽입</li>
+
+      <h2><strong>멀티미디어 관련</strong></h2>
+      <li>&lt;embed&gt; : 외부 콘텐츠(플러그인, 비디오 등)를 삽입</li>
+      <li>
+        &lt;source&gt; : &lt;audio&gt;, &lt;video&gt;, &lt;picture&gt; 요소의
+        미디어 소스를 지정
+      </li>
+      <li>
+        &lt;track&gt; : &lt;video&gt; 또는 &lt;audio&gt; 태그 내부에 사용하여,
+        자막, 캡션, 챕터 제목 등과 같은 미디어의 텍스트 트랙을 지정
+      </li>
+
+      <h2>
+        <strong>문서 메타 정보(데이터) 관련</strong>
+        <h5>&lt;head&gt; 태그 안에 위치하여 문서의 메타데이터를 정의</h5>
+      </h2>
+
+      <li>&lt;link&gt; : 외부 리소스(주로 CSS 파일)를 연결</li>
+      <li>
+        &lt;meta&gt; : 문서에 대한 메타데이터(예: 문자 집합, 뷰포트 설정, 검색
+        엔진 키워드 등)를 정의
+      </li>
+      <li>&lt;base&gt; : 문서 내의 모든 상대 URL에 대한 기본 URL을 지정</li>
+      <li>
+        &lt;area&gt; : &lt;map&gt; 태그 내부에 사용하여, 이미지 맵에서 클릭
+        가능한 영역을 정의
+      </li>
+
+      <h2><strong>폼 관련</strong></h2>
+      <li>&lt;input&gt; : 사용자가 데이터를 입력할 수 있는 필드를 정의</li>
+      <li>&lt;param&gt; : &lt;object&gt; 요소에 매개변수를 전달</li>
+
+      <h2><strong>표 관련</strong></h2>
+      <li>&lt;col&gt; : &lt;colgroup&gt; 요소 내의 열에 대한 속성을 지정</li>
+
+      <h2><strong>기타</strong></h2>
+      <li>
+        &lt;wbr&gt; : "단어 분리(Word Break)"를 의미하며, 텍스트가 길어질 경우
+        줄 바꿈이 가능한 위치를 브라우저에 제안
+      </li>
+    </ul>
+
+    <hr />
+    <h3>웹에 내가 적은 태그 그대로 보이게 하기</h3>
+    <mark style="background-color: rgba(194, 255, 138, 0.527)">
+      & lt;내용& gt;
+    </mark>
+    //<mark style="background-color: rgba(194, 255, 138, 0.527)">
+      & lt;/내용 & gt;" </mark
+    ><br />
+    (단일태그 아님 즉, 열고 닫아야함, 두번째 &앞에 내용넣기)
+  </body>
+</html>
